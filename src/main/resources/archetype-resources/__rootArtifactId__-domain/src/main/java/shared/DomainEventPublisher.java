@@ -26,7 +26,7 @@ public class DomainEventPublisher {
     @SuppressWarnings("unchecked")
     public static <T extends DomainEvent> void publish(final T domainEvent) {
         if (domainEvent == null) {
-            throw new IllegalArgumentException("domain event is null");
+            throw new IllegalArgumentException("__rootArtifactId__-domain.__rootArtifactId__-domain event is null");
         }
         List<DomainEventSubscriber<? extends DomainEvent>> subscribers = subscriberMap.get(domainEvent.getClass());
         if (subscribers != null && !subscribers.isEmpty()) {
